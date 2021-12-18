@@ -1,13 +1,13 @@
 //ES11 Features
 //Optional Chaining
+//Nullish Coalescing(0,null,nsn,undefined)
 //Private Fields
 //Static Fields
 //BigInt
-//globalThis
-//MatchAll
+//promises.allSettled()
 
 //--------------------------------------------Optional Chaining
-//returns undefined as o/p instead of typeerror when not defined or null value.
+//returns undefined as o/p instead of typeerror when "not defined or null value".
 
 const user = {
   name: "Aryclenio Barros",
@@ -164,3 +164,16 @@ for (const match of smartphones.matchAll(regex)) {
   input: 'S series, iPhone, note series, iPhone, A series, iPhone, moto phones',
   groups: undefined
 ] */
+
+//-----------------------------------Promise.AllSettled
+//The Promise.AllSettled attribute allows you to perform a conditional that 
+//observes whether all promises in an array have been resolved.
+const myArrayOfPromises = [
+    Promise.resolve(myPromise),
+    Promise.reject(0),
+    Promise.resolve(anotherPromise)
+]
+
+Promise.AllSettled(myArrayOfPromises).then ((result) => {
+   // Do your stuff
+})
